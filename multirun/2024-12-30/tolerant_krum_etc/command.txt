@@ -1,0 +1,1 @@
+p main.py --multirun config_fit.lr=0.01,0.05,0.1,0.5 batch_size=16,32 config_fit.local_epochs=3,5 num_clients_per_round_eval=2,5 strategy=faulttolerantfedavg,fedadagrad,fedtrimmedavg,krum,qfedavg

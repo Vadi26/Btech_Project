@@ -1,0 +1,23 @@
+[2025-01-29 16:24:45,904][numexpr.utils][INFO] - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-01-29 16:24:45,904][numexpr.utils][INFO] - NumExpr defaulting to 8 threads.
+[2025-01-29 16:24:50,648][flwr][INFO] - Starting Flower simulation, config: num_rounds=2, no round_timeout
+[2025-01-29 16:24:50,747][filelock][INFO] - Lock 139498107588560 acquired on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/node_ip_address.json.lock
+[2025-01-29 16:24:50,748][filelock][INFO] - Lock 139498107588560 released on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/node_ip_address.json.lock
+[2025-01-29 16:24:50,748][filelock][INFO] - Lock 139498107588560 acquired on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,748][filelock][INFO] - Lock 139498107588560 released on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,748][filelock][INFO] - Lock 139498107680464 acquired on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,749][filelock][INFO] - Lock 139498107680464 released on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,749][filelock][INFO] - Lock 139498107680464 acquired on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,749][filelock][INFO] - Lock 139498107680464 released on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,749][filelock][INFO] - Lock 139498098564208 acquired on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,750][filelock][INFO] - Lock 139498098564208 released on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,750][filelock][INFO] - Lock 139498098563152 acquired on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:50,750][filelock][INFO] - Lock 139498098563152 released on /tmp/ray/session_2025-01-29_16-24-50_746614_53263/ports_by_node.json.lock
+[2025-01-29 16:24:55,772][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:192.168.1.11': 1.0, 'CPU': 12.0, 'memory': 5200923035.0, 'object_store_memory': 2600461516.0, 'node:__internal_head__': 1.0}
+[2025-01-29 16:24:55,773][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2025-01-29 16:24:55,773][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0}
+[2025-01-29 16:24:55,798][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 6 actors
+[2025-01-29 16:24:55,800][flwr][INFO] - [INIT]
+[2025-01-29 16:24:55,800][flwr][INFO] - Requesting initial parameters from one random client
+[2025-01-29 16:25:02,650][flwr][INFO] - Received initial parameters from one random client
+[2025-01-29 16:25:02,650][flwr][INFO] - Starting evaluation of initial global parameters

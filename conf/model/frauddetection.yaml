@@ -1,0 +1,4 @@
+---
+_target_: model.FraudDetectionNet
+input_dim: 29
+num_classes: ${num_classes}

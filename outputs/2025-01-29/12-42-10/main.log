@@ -1,0 +1,79 @@
+[2025-01-29 12:42:11,741][numexpr.utils][INFO] - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-01-29 12:42:11,741][numexpr.utils][INFO] - NumExpr defaulting to 8 threads.
+[2025-01-29 12:42:15,487][flwr][INFO] - Starting Flower simulation, config: num_rounds=10, no round_timeout
+[2025-01-29 12:42:15,541][filelock][INFO] - Lock 133643015693984 acquired on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/node_ip_address.json.lock
+[2025-01-29 12:42:15,541][filelock][INFO] - Lock 133643015693984 released on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/node_ip_address.json.lock
+[2025-01-29 12:42:15,543][filelock][INFO] - Lock 133643015315808 acquired on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,543][filelock][INFO] - Lock 133643015315808 released on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,543][filelock][INFO] - Lock 133643015315952 acquired on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,543][filelock][INFO] - Lock 133643015315952 released on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,547][filelock][INFO] - Lock 133643015315568 acquired on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,547][filelock][INFO] - Lock 133643015315568 released on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,547][filelock][INFO] - Lock 133643015315760 acquired on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,548][filelock][INFO] - Lock 133643015315760 released on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,548][filelock][INFO] - Lock 133643015315904 acquired on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:15,548][filelock][INFO] - Lock 133643015315904 released on /tmp/ray/session_2025-01-29_12-42-15_539706_88439/ports_by_node.json.lock
+[2025-01-29 12:42:17,628][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:__internal_head__': 1.0, 'node:192.168.1.11': 1.0, 'CPU': 12.0, 'memory': 3705721652.0, 'object_store_memory': 1852860825.0}
+[2025-01-29 12:42:17,628][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2025-01-29 12:42:17,628][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0}
+[2025-01-29 12:42:17,641][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 6 actors
+[2025-01-29 12:42:17,641][flwr][INFO] - [INIT]
+[2025-01-29 12:42:17,642][flwr][INFO] - Requesting initial parameters from one random client
+[2025-01-29 12:42:21,257][flwr][INFO] - Received initial parameters from one random client
+[2025-01-29 12:42:21,257][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-01-29 12:42:21,288][flwr][ERROR] - Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/dataset.py", line 97, in __getitem__
+    return self.data[idx].clone().detach().float(), self.labels[idx].clone().detach().float()
+AttributeError: 'numpy.ndarray' object has no attribute 'clone'
+
+[2025-01-29 12:42:21,290][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/app.py", line 339, in start_simulation
+    hist = run_fl(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/server.py", line 95, in fit
+    res = self.strategy.evaluate(0, parameters=self.parameters)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/strategy/fedavg.py", line 167, in evaluate
+    eval_res = self.evaluate_fn(server_round, parameters_ndarrays, {})
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/server.py", line 32, in evaluate_fn
+    loss, accuracy = test_iot(model, testloader, device)
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/model.py", line 177, in test_iot
+    for data, labels in testloader:
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+    return self._process_data(data)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+AttributeError: Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/dataset.py", line 97, in __getitem__
+    return self.data[idx].clone().detach().float(), self.labels[idx].clone().detach().float()
+AttributeError: 'numpy.ndarray' object has no attribute 'clone'
+
+
+[2025-01-29 12:42:21,290][flwr][ERROR] - Your simulation crashed :(. This could be because of several reasons. The most common are: 
+	 > Sometimes, issues in the simulation code itself can cause crashes. It's always a good idea to double-check your code for any potential bugs or inconsistencies that might be contributing to the problem. For example: 
+		 - You might be using a class attribute in your clients that hasn't been defined.
+		 - There could be an incorrect method call to a 3rd party library (e.g., PyTorch).
+		 - The return types of methods in your clients/strategies might be incorrect.
+	 > Your system couldn't fit a single VirtualClient: try lowering `client_resources`.
+	 > All the actors in your pool crashed. This could be because: 
+		 - You clients hit an out-of-memory (OOM) error and actors couldn't recover from it. Try launching your simulation with more generous `client_resources` setting (i.e. it seems {'num_cpus': 2, 'num_gpus': 0} is not enough for your run). Use fewer concurrent actors. 
+		 - You were running a multi-node simulation and all worker nodes disconnected. The head node might still be alive but cannot accommodate any actor with resources: {'num_cpus': 2, 'num_gpus': 0}.
+Take a look at the Flower simulation examples for guidance <https://flower.ai/docs/framework/how-to-run-simulations.html>.

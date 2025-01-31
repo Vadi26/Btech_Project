@@ -1,0 +1,13 @@
+strategy
+    num_rounds
+    num_clients
+    batch_size
+    num_clients_per_round_eval
+
+    lr
+    momentum
+    local_epochs
+
+
+multirun naming convention : 
+num_rounds _ num_clients _ batch_size _ num_clients_per_round_eval _ lr _ local_epochs

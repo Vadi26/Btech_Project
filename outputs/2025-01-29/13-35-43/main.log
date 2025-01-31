@@ -1,0 +1,307 @@
+[2025-01-29 13:35:45,389][numexpr.utils][INFO] - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2025-01-29 13:35:45,389][numexpr.utils][INFO] - NumExpr defaulting to 8 threads.
+[2025-01-29 13:35:49,157][flwr][INFO] - Starting Flower simulation, config: num_rounds=2, no round_timeout
+[2025-01-29 13:35:49,203][filelock][INFO] - Lock 136335098525536 acquired on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/node_ip_address.json.lock
+[2025-01-29 13:35:49,204][filelock][INFO] - Lock 136335098525536 released on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/node_ip_address.json.lock
+[2025-01-29 13:35:49,207][filelock][INFO] - Lock 136335098525920 acquired on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098525920 released on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098525488 acquired on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098525488 released on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098525200 acquired on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098525200 released on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098166480 acquired on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098166480 released on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098165424 acquired on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:49,208][filelock][INFO] - Lock 136335098165424 released on /tmp/ray/session_2025-01-29_13-35-49_203440_119230/ports_by_node.json.lock
+[2025-01-29 13:35:51,296][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:__internal_head__': 1.0, 'node:192.168.1.11': 1.0, 'CPU': 12.0, 'memory': 4078468302.0, 'object_store_memory': 2039234150.0}
+[2025-01-29 13:35:51,297][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2025-01-29 13:35:51,297][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0}
+[2025-01-29 13:35:51,305][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 6 actors
+[2025-01-29 13:35:51,306][flwr][INFO] - [INIT]
+[2025-01-29 13:35:51,306][flwr][INFO] - Requesting initial parameters from one random client
+[2025-01-29 13:35:53,600][flwr][INFO] - Received initial parameters from one random client
+[2025-01-29 13:35:53,600][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-01-29 13:36:10,260][flwr][INFO] - initial parameters (loss, other metrics): 18244.6854596138, {'accuracy': 0.1740485391275998}
+[2025-01-29 13:36:10,261][flwr][INFO] - 
+[2025-01-29 13:36:10,261][flwr][INFO] - [ROUND 1]
+[2025-01-29 13:36:10,261][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 10)
+[2025-01-29 13:36:17,232][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-01-29 13:36:17,236][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2025-01-29 13:36:39,841][flwr][INFO] - fit progress: (1, 5333.385557249188, {'accuracy': 0.7881615158169283}, 29.580042588999277)
+[2025-01-29 13:36:39,841][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 10)
+[2025-01-29 13:36:40,276][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+
+[2025-01-29 13:36:40,276][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+[2025-01-29 13:36:40,484][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+
+[2025-01-29 13:36:40,485][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+[2025-01-29 13:36:40,485][flwr][INFO] - aggregate_evaluate: received 0 results and 2 failures
+[2025-01-29 13:36:40,485][flwr][INFO] - 
+[2025-01-29 13:36:40,485][flwr][INFO] - [ROUND 2]
+[2025-01-29 13:36:40,486][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 10)
+[2025-01-29 13:37:08,117][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-01-29 13:37:32,237][flwr][INFO] - fit progress: (2, 3864.6896044425666, {'accuracy': 0.8360390077382608}, 81.97625029799929)
+[2025-01-29 13:37:32,238][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 10)
+[2025-01-29 13:37:32,746][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+
+[2025-01-29 13:37:32,746][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120056, ip=192.168.1.11, actor_id=b94a054001dd1aa67c9a7ef801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x71fa4f54e190>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+[2025-01-29 13:37:33,425][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 94, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 398, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 279, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+
+[2025-01-29 13:37:33,425][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/message_handler/message_handler.py", line 136, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/client.py", line 275, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/client/numpy_client.py", line 283, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/home/vadi/oii/Academics/BtechProject/tutorial/client.py", line 228, in evaluate
+    results = {"round": config["server_round"], "client_id": self.cid, "loss": loss, "accuracy": accuracy}
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/common/record/typeddict.py", line 60, in __getitem__
+    return cast(Dict[K, V], self.__dict__["_data"])[item]
+KeyError: 'server_round'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=120055, ip=192.168.1.11, actor_id=c976dc4387c4b05f76afcca701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x775e08dce250>)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 63, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'server_round'
+[2025-01-29 13:37:33,425][flwr][INFO] - aggregate_evaluate: received 0 results and 2 failures
+[2025-01-29 13:37:33,426][flwr][INFO] - 
+[2025-01-29 13:37:33,426][flwr][INFO] - [SUMMARY]
+[2025-01-29 13:37:33,426][flwr][INFO] - Run finished 2 round(s) in 83.16s
+[2025-01-29 13:37:33,426][flwr][INFO] - 	History (loss, centralized):
+[2025-01-29 13:37:33,427][flwr][INFO] - 		round 0: 18244.6854596138
+[2025-01-29 13:37:33,427][flwr][INFO] - 		round 1: 5333.385557249188
+[2025-01-29 13:37:33,427][flwr][INFO] - 		round 2: 3864.6896044425666
+[2025-01-29 13:37:33,427][flwr][INFO] - 	History (metrics, centralized):
+[2025-01-29 13:37:33,427][flwr][INFO] - 	{'accuracy': [(0, 0.1740485391275998),
+[2025-01-29 13:37:33,427][flwr][INFO] - 	              (1, 0.7881615158169283),
+[2025-01-29 13:37:33,427][flwr][INFO] - 	              (2, 0.8360390077382608)]}
+[2025-01-29 13:37:33,427][flwr][INFO] - 

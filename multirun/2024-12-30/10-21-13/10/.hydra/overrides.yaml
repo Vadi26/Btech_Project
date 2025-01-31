@@ -1,0 +1,2 @@
+- config_fit.local_epochs=2
+- strategy=krum

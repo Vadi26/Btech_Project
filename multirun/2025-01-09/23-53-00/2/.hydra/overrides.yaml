@@ -1,0 +1,2 @@
+- num_clients_per_round_fit=7
+- strategy=fedprox

@@ -1,0 +1,43 @@
+[2024-12-30 10:23:21,910][flwr][INFO] - Starting Flower simulation, config: num_rounds=10, no round_timeout
+[2024-12-30 10:23:25,410][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:__internal_head__': 1.0, 'memory': 5044233831.0, 'object_store_memory': 2522116915.0, 'node:192.168.1.11': 1.0, 'CPU': 12.0}
+[2024-12-30 10:23:25,410][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2024-12-30 10:23:25,410][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 2, 'num_gpus': 0}
+[2024-12-30 10:23:25,420][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 6 actors
+[2024-12-30 10:23:25,420][flwr][INFO] - [INIT]
+[2024-12-30 10:23:25,420][flwr][INFO] - Using initial global parameters provided by strategy
+[2024-12-30 10:23:25,421][flwr][INFO] - Starting evaluation of initial global parameters
+[2024-12-30 10:23:25,421][flwr][INFO] - Evaluation returned no results (`None`)
+[2024-12-30 10:23:25,421][flwr][INFO] - 
+[2024-12-30 10:23:25,421][flwr][INFO] - [ROUND 1]
+[2024-12-30 10:23:25,421][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 10)
+[2024-12-30 10:23:30,507][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2024-12-30 10:23:30,507][flwr][ERROR] - 'utf-8' codec can't decode byte 0x93 in position 0: invalid start byte
+[2024-12-30 10:23:30,508][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/simulation/app.py", line 339, in start_simulation
+    hist = run_fl(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/server.py", line 115, in fit
+    res_fit = self.fit_round(
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/server.py", line 251, in fit_round
+    ] = self.strategy.aggregate_fit(server_round, results, failures)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/strategy/fedxgb_bagging.py", line 70, in aggregate_fit
+    global_model = aggregate(global_model, bst)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/strategy/fedxgb_bagging.py", line 125, in aggregate
+    tree_num_prev, _ = _get_tree_nums(bst_prev_org)
+  File "/home/vadi/anaconda3/lib/python3.8/site-packages/flwr/server/strategy/fedxgb_bagging.py", line 156, in _get_tree_nums
+    xgb_model = json.loads(bytearray(xgb_model_org))
+  File "/home/vadi/anaconda3/lib/python3.8/json/__init__.py", line 343, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x93 in position 0: invalid start byte
+
+[2024-12-30 10:23:30,508][flwr][ERROR] - Your simulation crashed :(. This could be because of several reasons. The most common are: 
+	 > Sometimes, issues in the simulation code itself can cause crashes. It's always a good idea to double-check your code for any potential bugs or inconsistencies that might be contributing to the problem. For example: 
+		 - You might be using a class attribute in your clients that hasn't been defined.
+		 - There could be an incorrect method call to a 3rd party library (e.g., PyTorch).
+		 - The return types of methods in your clients/strategies might be incorrect.
+	 > Your system couldn't fit a single VirtualClient: try lowering `client_resources`.
+	 > All the actors in your pool crashed. This could be because: 
+		 - You clients hit an out-of-memory (OOM) error and actors couldn't recover from it. Try launching your simulation with more generous `client_resources` setting (i.e. it seems {'num_cpus': 2, 'num_gpus': 0} is not enough for your run). Use fewer concurrent actors. 
+		 - You were running a multi-node simulation and all worker nodes disconnected. The head node might still be alive but cannot accommodate any actor with resources: {'num_cpus': 2, 'num_gpus': 0}.
+Take a look at the Flower simulation examples for guidance <https://flower.ai/docs/framework/how-to-run-simulations.html>.

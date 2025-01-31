@@ -1,0 +1,17 @@
+---
+
+num_rounds: 2
+num_clients: 6
+batch_size: 20
+num_classes: 6
+num_clients_per_round_fit: 2
+num_clients_per_round_eval: 2
+data_path: C:\Users\91988\Downloads\flwr working\tutorial\data\IOT\IoT_Intrusion.csv
+config_fit: 
+  lr: 0.001
+  momentum: 0.9
+  local_epochs: 1
+
+defaults:
+  - strategy: fedavg
+  - model: iotnet
